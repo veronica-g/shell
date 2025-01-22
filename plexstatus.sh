@@ -1,4 +1,3 @@
-
 #!/usr/bin/env sh
 tempa=$(sudo smartctl -x /dev/sda | grep "Current Temperature" | awk  '{print $3}')
 tempb=$(sudo smartctl -x /dev/sdb | grep "Current Temperature" | awk  '{print $3}')
