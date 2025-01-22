@@ -9,7 +9,7 @@ smartc=$(sudo smartctl -x /dev/sdc | grep "SMART overall-health self-assessment 
 usagea=$(df -Th | grep /dev/sda2 | awk '{print$6}')
 usageb=$(df -Th | grep /dev/sdb1 | awk '{print$6}')
 usagec=$(df -Th | grep /dev/sdc1 | awk '{print$6}')
-totalstatus=$(systemctl status plexmediaserver)
+serverstatus=$(sudo systemctl status plexmediaserver | grep Loaded && sudo systemctl status plexmediaserver | grep Active)
 sdaused=$(df -Th | grep /dev/sda2 | awk '{print$4}')
 sdacapy=$(df -Th | grep /dev/sda2 | awk '{print$3}')
 sdafree=$(df -Th | grep /dev/sda2 | awk '{print$5}')
@@ -24,8 +24,7 @@ echo '========================='
 echo 'PLEX MEDIA SERVER STATUS:'
 echo '========================='
 echo
-echo
-echo "$totalstatus"
+echo "$serverstatus"
 echo
 echo '==============='
 echo 'DRIVE STATUSES:'
