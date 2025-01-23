@@ -49,19 +49,19 @@ echo '================'
 echo ' SYSTEM STATUS: '
 echo '================'
 echo
-echo '*** System Drive:'
+echo '*** '$systemdrive' (System Drive):'
 echo '     Temp is '$tempa'°C'
 echo '     SMART health assessment: '$smarta
 echo '     Disk usage is '$usagea' ('$sdaused' / '$sdacapy' with '$sdafree' free)'
 echo
 echo
-echo '*** /dev/sdb (Movies):'
+echo '*** '$moviedrive' (Movies):'
 echo '     Temp is '$tempb'°C'
 echo '     SMART health assessment: '$smartb
 echo '     Disk usage is '$usageb' ('$sdbused' / '$sdbcapy' with '$sdbfree' free)'
 echo
 echo
-echo '*** /dev/sdc (TV):'
+echo '*** '$tvdrive' (TV Shows):'
 echo '     Temp is '$tempc'°C'
 echo '     SMART health assessment: '$smartc
 echo '     Disk usage is '$usagec' ('$sdcused' / '$sdccapy' with '$sdcfree' free)'
